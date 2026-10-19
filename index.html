@@ -16,33 +16,26 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <section class="system-intro" id="system-intro" role="dialog" aria-modal="true" aria-labelledby="intro-title" aria-describedby="intro-message" hidden>
-    <div class="intro-web intro-web-left" aria-hidden="true"></div>
-    <div class="intro-web intro-web-right" aria-hidden="true"></div>
-    <div class="intro-shell">
-      <header class="intro-header"><span><i class="intro-live-dot"></i> SPIDER-NEL // SYSTEM BOOT</span><span>EARTH-666 <b>•</b> SECURE CHANNEL</span></header>
-      <div class="intro-main">
-        <div class="intro-scanner" aria-hidden="true"><div class="scan-ring"><span class="scan-web"></span><span class="scan-core">SN</span><span class="scan-line"></span><span class="scan-cross scan-cross-x"></span><span class="scan-cross scan-cross-y"></span></div><span class="scanner-label">IDENTITY SCAN / ACTIVE</span></div>
-        <div class="intro-copy">
-          <p class="intro-kicker">PERSONAL DEFENSE NETWORK <span>//</span> 01.01</p>
-          <h1 id="intro-title" tabindex="-1">SPIDER<br><span>SYSTEM</span></h1>
-          <p class="intro-message" id="intro-message" aria-live="polite">INITIALIZING SPIDER SYSTEM...</p>
-          <p class="intro-access" id="intro-access" hidden>ACCESS GRANTED</p>
-          <div class="intro-progress-row"><span>IDENTITY VERIFICATION</span><span id="intro-progress-label">00%</span></div>
-          <div class="intro-progress-track" role="progressbar" aria-label="Identity scan progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="intro-progress-bar"></span></div>
-          <div class="intro-footerline"><span id="intro-phase">BOOT SEQUENCE / 01—08</span><span><i class="intro-live-dot"></i> SYSTEM ONLINE</span></div>
-        </div>
-      </div>
-      <div class="intro-bottomline"><span>NEURAL LINK: STABLE</span><span>PROFILE // NELJAY SEVILLA</span><span>NO AUDIO OUTPUT</span></div>
-    </div>
-    <button class="intro-skip" id="intro-skip" type="button" aria-label="Skip system boot intro">SKIP INTRO <span aria-hidden="true">↗</span></button>
-  </section>
+  <div class="hanging-spider" id="hanging-spider" aria-label="Hanging spider Easter egg">
+    <span class="hanging-spider-silk" aria-hidden="true"></span>
+    <button class="hanging-spider-button" id="hanging-spider-button" type="button" aria-label="Send the spider crawling" aria-pressed="false">
+      <svg class="spider-art" viewBox="0 0 42 40" aria-hidden="true" focusable="false">
+        <g class="spider-legs">
+          <path class="spider-leg-outline" d="M17 12 10 8 5 2 M16 15 8 13 2 9 M16 19 8 21 3 27 M18 22 11 28 7 36 M25 12 32 8 37 2 M26 15 34 13 40 9 M26 19 34 21 39 27 M24 22 31 28 35 36" />
+          <path class="spider-leg" d="M17 12 10 8 5 2 M16 15 8 13 2 9 M16 19 8 21 3 27 M18 22 11 28 7 36 M25 12 32 8 37 2 M26 15 34 13 40 9 M26 19 34 21 39 27 M24 22 31 28 35 36" />
+        </g>
+        <ellipse class="spider-abdomen" cx="21" cy="25" rx="6.2" ry="8.1" />
+        <ellipse class="spider-thorax" cx="21" cy="15" rx="4.6" ry="5.2" />
+        <circle class="spider-highlight" cx="19.4" cy="12.9" r="1.1" />
+      </svg>
+    </button>
+  </div>
   <div class="scroll-progress" aria-hidden="true"><span id="progress-bar"></span></div>
   <header class="site-header" id="top">
     <a class="wordmark" href="#top" aria-label="Spider-Nel home"><span class="wordmark-mark">S</span>PIDER<span class="wordmark-dash">-</span>NEL<span class="wordmark-dot">.</span></a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation"><span></span><span></span></button>
     <nav class="site-nav" id="site-nav" aria-label="Main navigation">
-      <a href="#origin">Origin</a><a href="#missions">Missions</a><a href="#skills">Skills</a><a href="#beyond">Beyond the mask</a><a href="#contact">Contact</a>
+      <a href="#missions">Projects</a><a href="#terminal">Terminal</a><a href="#origin">Origin</a><a href="#skills">Skills</a><a href="#beyond">Beyond the mask</a><a href="#contact">Contact</a>
       <a class="nav-connect" href="#connect">Let's connect <span aria-hidden="true">↘</span></a>
     </nav>
   </header>
@@ -111,6 +104,38 @@
         </article>
       </div>
       <p class="section-footnote"><span class="signal-dot"></span> ALL MISSIONS: IN PROGRESS / CONCEPTS AND LEARNING PROJECTS</p>
+    </section>
+
+    <section class="chapter terminal-section" id="terminal" aria-labelledby="terminal-title">
+      <div class="section-top reveal"><p class="eyebrow"><span>INTERACTIVE FEATURE</span> // SPIDER-NEL SYSTEM ACCESS</p></div>
+      <div class="terminal-heading reveal">
+        <div><p class="eyebrow">PERSONAL PORTFOLIO INTERFACE</p><h2 id="terminal-title">Access the <span>system.</span></h2></div>
+        <p>Explore my work, skills, and contact channels through a few simple commands.</p>
+      </div>
+      <div class="terminal-window reveal">
+        <div class="terminal-header">
+          <div class="terminal-brand"><span class="terminal-mark" aria-hidden="true">SN</span><strong>SPIDER-NEL // TERMINAL</strong></div>
+          <span class="terminal-status"><i aria-hidden="true"></i> SYSTEM ONLINE</span>
+          <button class="terminal-clear" id="terminal-clear" type="button" aria-label="Clear terminal output">CLEAR <span aria-hidden="true">×</span></button>
+        </div>
+        <div class="terminal-output" id="terminal-output" role="log" aria-live="polite" aria-relevant="additions text" aria-label="Terminal command history"></div>
+        <form class="terminal-command-form" id="terminal-form" autocomplete="off">
+          <label class="terminal-prompt" for="terminal-input">guest@spider-nel:~$</label>
+          <input id="terminal-input" name="command" type="text" maxlength="48" autocapitalize="none" autocomplete="off" spellcheck="false" aria-label="Type a terminal command" placeholder="type help to begin">
+          <button class="terminal-submit" type="submit" aria-label="Run command">↵</button>
+        </form>
+        <div class="terminal-suggestions" role="group" aria-label="Command suggestions">
+          <span>TRY</span>
+          <button type="button" data-terminal-command="help">help</button>
+          <button type="button" data-terminal-command="about">about</button>
+          <button type="button" data-terminal-command="skills">skills</button>
+          <button type="button" data-terminal-command="projects">projects</button>
+          <button type="button" data-terminal-command="contact">contact</button>
+          <button type="button" data-terminal-command="whoami">whoami</button>
+          <button type="button" data-terminal-command="date">date</button>
+          <button type="button" data-terminal-command="sudo">sudo</button>
+        </div>
+      </div>
     </section>
 
     <section class="chapter skills-section" id="skills" aria-labelledby="skills-title">
